@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': '21c98ce353msh2e77624f518ce0bp1fb9f3jsn84b6d813ebd7',
+        'X-RapidAPI-Key': '', //Use your own api key from https://rapidapi.com/tank01/api/tank01-mlb-live-in-game-real-time-statistics/
         'X-RapidAPI-Host': 'tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com'
       }
     };
@@ -124,7 +124,7 @@ const url = `https://tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com
 const options = {
   method: 'GET',
   headers: {
-    'X-RapidAPI-Key': '21c98ce353msh2e77624f518ce0bp1fb9f3jsn84b6d813ebd7',
+    'X-RapidAPI-Key': '', /*Use your own api key from https://rapidapi.com/tank01/api/tank01-mlb-live-in-game-real-time-statistics/*/
     'X-RapidAPI-Host': 'tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com'
   }
 };
