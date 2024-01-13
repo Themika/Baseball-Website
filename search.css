@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.left-side {
+    width: 250px;
+    height: 250px;
+}
+
+body {
+    background-color: black;
+}
+
+h2 {
+    color: white;
+    transform: translate(2.5%, -250%);
+}
+
+#container {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(public/BaseBall-background.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    display: grid;
+    grid-template-rows: 450px 450px 450px;
+    grid-template-columns: 300px 300px;
+    grid-gap: 30px;
+    justify-content: end;
+    padding-top: 15px;
+    padding-right: 10px;
+}
+
+.searchBar {
+    margin-top: -47.5%;
+    justify-content: start;
+    display: flex;
+    align-items: start;
+    margin-left: 1%;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 700px;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+}
+
+.search-bar input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: white;
+}
+
+::placeholder {
+    color: white;
+}
+
+.search-bar button img {
+    width: 25px;
+    height: 25px;
+}
+
+.search-bar button {
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: #164ba1;
+    cursor: pointer;
+}
+
+.btn {
+    transform: translate(50%, -320%);
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 500;
+    background: #f44566;
+    color: white;
+    width: 100%;
+}
+
+p {
+    text-align: left;
+    color: white;
+    margin-left: 10px;
+}
+
+h4 {
+    display: list-item;
+    text-transform: uppercase;
+    list-style-type: square;
+    list-style-position: inside;
+    text-align: left;
+    font-weight: normal;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px; /* Adjust the gap to your desired value */
+    align-items: flex-start;
+}
+
+.card {
+    background: white;
+    --padding: 1rem;
+    border: 2px solid #164ba1;
+    border-radius: .25rem;
+    overflow: hidden;
+}
+
+.card-header {
+    font-size: 1.5rem;
+    padding: var(--padding);
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: .5rem;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+.card-body {
+    font-size: .9rem;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0 var(--padding);
+    margin-bottom: 1rem;
+}
+
+.card {
+    position: relative;
+    background: white;
+    --padding: 1rem;
+    border: 2px solid #164ba1;
+    border-radius: .25rem;
+    overflow: hidden;
+}
+
+.btn {
+    bottom: 15px; /* Increase the margin to 15 pixels */
+    left: 50%;
+    transform: translateX(50%);
+    background: hsl(217, 76%, 36%);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    padding: .5em .75em;
+    border-radius: .25em;
+    cursor: pointer;
+    width: 50%;
+}
+
+.btn:hover,
+.btn:focus {
+    background: hsl(217, 76%, 60%);
+}
+
+.card-footer{
+    margin-bottom: 1rem;
+}
+.card-header.card-image {
+    overflow: hidden;
+}
+
+.card-header.card-image>img {
+    display: block;
+    width: 100%;
+    max-height: 200px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    object-position: center;
+    padding: 0;
+    border-radius: 5px;
+    transition: 200ms, transform ease-in-out;
+    border: 2px solid #164ba1;
+}
+
+.card:hover>.card-header.card-image>img {
+    transform: scale(1.025);
+}
+
+h3{
+    margin: .25rem;
+}
+.Read-More{
+    background: hsl(217, 76%, 36%);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    padding: .5em .75em;
+    border-radius: .25em;
+    cursor: pointer;
+    width: 50%;
+    height: 30px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.news-card{
+    font-family: 'Open Sans', sans-serif;
+    background: white;
+    padding: 1rem;
+    border: 1rem solid #164ba1;
+    border-radius: .25rem;
+}
+.nes-card-header{
+    font-size: 1rem;
+    margin-bottom: .5rem;
+    font-family: 'Open Sans', sans-serif;
+}
+.news-card-footer{
+    margin-top: 1rem;   
+}
+
+.news-button{
+    background: hsl(217, 76%, 36%);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    padding: .5em .75em;
+    border-radius: .25em;
+    cursor: pointer;
+    width: 50%;
+}
+
+.news-button:hover,
+.news-button:focus {
+    background: hsl(217, 76%, 60%);
+}
+
+.news-card-grid{
+    margin-top: 10px;
+    display: grid;
+    grid-template-rows: 150px 150px 150px;
+    grid-template-columns: 300px 300px;
+    gap: 20px;
+    margin-left: 20px;
+
+}
+
+.p{
+    text-align: center;
+    margin: auto;
+    width: 42%;
+    border: 3px solid #164ba1;
+    padding-top: 10px;
+    background: white;
+    margin-top: 10px;
+    margin-left: 20px;
+}
