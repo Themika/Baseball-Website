@@ -15,11 +15,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const url = `https://tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com/getMLBTeamRoster?teamAbv=${acronym}&getStats=true`;
     const options = {
-      method: 'GET',
+      method: "GET",
       headers: {
-        'X-RapidAPI-Key': '', //Use your own api key from https://rapidapi.com/tank01/api/tank01-mlb-live-in-game-real-time-statistics/
-        'X-RapidAPI-Host': 'tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com'
-      }
+        "X-RapidAPI-Key": "", //Use your own api key from https://rapidapi.com/tank01/api/tank01-mlb-live-in-game-real-time-statistics/
+        "X-RapidAPI-Host":
+          "tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com",
+      },
     };
 
     try {
@@ -27,7 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
       result = await response.json(); // Assign the result inside the try block
       console.log(result);
 
-      const newCards = result.body.roster.slice(loadedCards, loadedCards + 6).map(player => `
+      const newCards = result.body.roster
+        .slice(loadedCards, loadedCards + 6)
+        .map(
+          (player) => `
         <div class="card-grid">
           <div class="card card-shadow">
             <div class="card-header">${player.longName}</div>
@@ -47,20 +51,21 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
           </div>
         </div>
-      `).join('');
+      `
+        )
+        .join("");
 
       container.innerHTML += newCards;
       loadedCards += 6;
 
       // Move the "Read More" button to the bottom of the screen
-      readMoreButton.classList.add('fixed');
-
+      readMoreButton.classList.add("fixed");
     } catch (error) {
       console.error(error);
     }
   }
 
-  readMoreButton.addEventListener('click', loadMoreCards);
+  readMoreButton.addEventListener("click", loadMoreCards);
 
   searchForm.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -72,11 +77,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const url = `https://tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com/getMLBTeamRoster?teamAbv=${acronym}&getStats=true`;
     const options = {
-      method: 'GET',
+      method: "GET",
       headers: {
-        'X-RapidAPI-Key': '',//Use your own api key from https://rapidapi.com/tank01/api/tank01-mlb-live-in-game-real-time-statistics/
-        'X-RapidAPI-Host': 'tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com'
-      }
+        "X-RapidAPI-Key": "", //Use your own api key from https://rapidapi.com/tank01/api/tank01-mlb-live-in-game-real-time-statistics/
+        "X-RapidAPI-Host":
+          "tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com",
+      },
     };
 
     try {
@@ -87,7 +93,10 @@ document.addEventListener("DOMContentLoaded", () => {
       // Clear previous search results
       container.innerHTML = "";
 
-      const generateCards = result.body.roster.slice(0, loadedCards).map(player => `
+      const generateCards = result.body.roster
+        .slice(0, loadedCards)
+        .map(
+          (player) => `
         <div class="card-grid">
           <div class="card card-shadow">
             <div class="card-header">${player.longName}</div>
@@ -107,13 +116,14 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
           </div>
         </div>
-      `).join('');
+      `
+        )
+        .join("");
 
       container.innerHTML += generateCards;
 
       // Move the "Read More" button to the bottom of the screen
-      readMoreButton.classList.add('fixed');
-
+      readMoreButton.classList.add("fixed");
     } catch (error) {
       console.error(error);
     }
@@ -122,11 +132,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const url = `https://tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com/getMLBNews?topNews=true&recentNews=true&maxItems=10`;
 const options = {
-  method: 'GET',
+  method: "GET",
   headers: {
-    'X-RapidAPI-Key': '', /*Use your own api key from https://rapidapi.com/tank01/api/tank01-mlb-live-in-game-real-time-statistics/*/
-    'X-RapidAPI-Host': 'tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com'
-  }
+    "X-RapidAPI-Key":
+      "" /*Use your own api key from https://rapidapi.com/tank01/api/tank01-mlb-live-in-game-real-time-statistics/*/,
+    "X-RapidAPI-Host":
+      "tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com",
+  },
 };
 
 try {
@@ -153,7 +165,6 @@ try {
 
   // Append the newsCardGrid to the element with id "body-card"
   document.getElementById("body-card").appendChild(newsCardGrid);
-
 } catch (error) {
   console.error(error);
 }
